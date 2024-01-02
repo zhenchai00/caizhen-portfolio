@@ -1,10 +1,10 @@
-import NavBar from "@/components/navbar"
-
+import React from "react";
+import HeroSection from "@/components/Home/HeroSection";
 export default function Home() {
     return (
-        <div className="flex min-h-screen flex-col">
-            <NavBar />
-            <p>hello world</p>
+        <div className="" id="main">
+            <p>hello test world</p>
+            <HeroSection />
         </div>
     );
 }
