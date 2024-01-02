@@ -8,6 +8,7 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import catError from "../public/cat-error.png"
+import { Button } from "@mui/material";
 
 export default function Error({
     error,
@@ -22,17 +23,18 @@ export default function Error({
     }, [error]);
 
     return (
-        <div className="h-screen flex flex-col items-center justify-center">
-            <Image src={catError} alt="error cat" />
-            <h2>Something went wrong!</h2>
-            <button
+        <div className="min-h-screen flex flex-col items-center justify-center">
+            <Image src={catError} alt="error cat" width={400} />
+            <h2 className="m-5">Something went wrong!</h2>
+            <Button
+                variant="contained"
                 onClick={
                     // Attempt to recover by trying to re-render the segment
                     () => reset()
                 }
             >
                 Try again
-            </button>
+            </Button>
         </div>
     );
 }
