@@ -3,10 +3,12 @@
  * Refer to https://nextjs.org/docs/app/api-reference/file-conventions/layout
  */
 
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
+import React from "react";
 import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
 import "../styles/globals.css";
-import NavBar from "@/components/navbar";
+import NavBar from "@/components/NavigationBar/NavBar";
 
 const SourceCodePro = Source_Code_Pro({
     weight: ["400", "700"],
@@ -26,8 +28,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <NavBar />
-            <body className={`${SourceCodePro.variable} font-sans`}>{children}</body>
+            <AppRouterCacheProvider>
+                <body className={`${SourceCodePro.variable} font-sans`}>
+                    <NavBar />
+                    {children}
+                </body>
+            </AppRouterCacheProvider>
         </html>
     );
 }
