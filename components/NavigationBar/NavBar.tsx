@@ -11,6 +11,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import NavItem from "./NavItem";
+import Link from "next/link";
 
 interface Props {
     window?: () => Window;
@@ -18,9 +19,9 @@ interface Props {
 
 const drawerWidth = 240;
 const MENU_ITEMS = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "#about" },
-    { name: "Project", href: "#project" },
+    { name: "About Me", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
 ];
 
 const NavBar = (props: Props) => {
@@ -35,31 +36,34 @@ const NavBar = (props: Props) => {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} className="min-h-screen">
-            {MENU_ITEMS.map((item, idx) => (
-                <NavItem
-                    key={idx}
-                    href={item.href}
-                    name={item.name}
-                    className="flex p-4 align-center justify-center text-xl"
-                />
-            ))}
+            <div>
+                {MENU_ITEMS.map((item, idx) => (
+                    <NavItem
+                        key={idx}
+                        href={item.href}
+                        name={item.name}
+                        className="flex p-4 align-center justify-center text-xl"
+                    />
+                ))}
+            </div>
         </Box>
     );
 
     return (
         <Box sx={{ display: "flex" }}>
             <AppBar
-                position="relative"
                 component="nav"
-                sx={{ backgroundColor: "#404258" }}
+                sx={{ backgroundColor: "#365486" }}
             >
                 <Toolbar className="flex justify-between items-center">
-                    <Typography
-                        variant="h6"
-                        sx={{ my: 2, fontFamily: "inherit" }}
-                    >
-                        Cai Zhen
-                    </Typography>
+                    <Link href={"/"}>
+                        <Typography
+                            variant="h6"
+                            sx={{ my: 2, fontFamily: "inherit" }}
+                        >
+                            Cai Zhen
+                        </Typography>
+                    </Link>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -95,7 +99,7 @@ const NavBar = (props: Props) => {
                     "& .MuiDrawer-paper": {
                         boxSizing: "border-box",
                         width: drawerWidth,
-                        backgroundColor: "#404258",
+                        backgroundColor: "#365486",
                         color: "#fff",
                     },
                 }}

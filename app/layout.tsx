@@ -29,9 +29,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <AppRouterCacheProvider>
-                <body className={`${SourceCodePro.variable} font-sans`}>
+                <body className={`${SourceCodePro.variable} font-sans min-h-screen mx-auto`}>
                     <NavBar />
-                    {children}
+                    <div className="px-6 md:px-12">
+                        {children}
+                    </div>
                 </body>
             </AppRouterCacheProvider>
         </html>
