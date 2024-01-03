@@ -1,10 +1,13 @@
 import React from "react";
-import HeroSection from "@/components/Home/HeroSection";
+import Main from "@/components/Home/Main";
+import AboutMe from "@/components/Home/AboutMe";
+import Footer from "@/components/Footer";
 export default function Home() {
     return (
-        <div className="" id="main">
-            <p>hello test world</p>
-            <HeroSection />
+        <div className="min-h-screen flex flex-col">
+            <Main />
+            <AboutMe />
+            <Footer />
         </div>
     );
 }
