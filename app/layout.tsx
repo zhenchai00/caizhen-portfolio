@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
 import "../styles/globals.css";
 import NavBar from "@/components/NavigationBar/NavBar";
+import { Analytics } from "@vercel/analytics/react";
 
 const SourceCodePro = Source_Code_Pro({
     weight: ["400", "700"],
@@ -34,6 +35,7 @@ export default function RootLayout({
                     <div className="px-6 md:px-12">
                         {children}
                     </div>
+                    <Analytics />
                 </body>
             </AppRouterCacheProvider>
         </html>
