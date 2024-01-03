@@ -67,7 +67,7 @@ const Main = () => {
                         <span className="text-xl text-white">Projects</span>
                     </Link>
                     <Link
-                        href="https://drive.google.com/file/d/1ajOJwhrua1lElHtbVjzOv12ySXn8xPBa/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1EJ9xl_Dhp0FI6mAk9VpB_hw8DFbMfhXG/view?usp=sharing"
                         className="px-6 inline-block py-3 rounded-full mr-4 border-solid border-2  border-cyan-500 hover:bg-sky-700"
                     >
                         <span className="text-xl text-white">View my Resume</span>
