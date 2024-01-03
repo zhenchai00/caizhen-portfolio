@@ -61,7 +61,7 @@ const AboutMe = () => {
     };
 
     return (
-        <div className="text-white grid" id="about">
+        <div className="text-black dark:text-white grid" id="about">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-32 py-16 xl-gap-16 items-center">
                 <Image
                     src={aboutMe}
@@ -70,7 +70,7 @@ const AboutMe = () => {
                     style={{ borderRadius: "25px" }}
                 />
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-                    <h1 className="text-4xl font-bold text-white mb-4">
+                    <h1 className="text-4xl font-bold text-black dark:text-white mb-4">
                         About Me
                     </h1>
                     <p className="text-base text-justify lg:text-lg">
