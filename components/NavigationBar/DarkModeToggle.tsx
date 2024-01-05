@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { DarkMode, LightMode } from "@mui/icons-material";
-import { IconButton, ToggleButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 
@@ -23,10 +22,11 @@ const DarkModeToggle = ({ className }: Props) => {
 
     const onToggleDarkMode = () => {
         setDarkMode(!darkMode);
+        console.log("onToggleDarkMode", darkMode);
         if (darkMode) {
-            document.querySelector("html")?.classList.add("dark");
-        } else {
             document.querySelector("html")?.classList.remove("dark");
+        } else {
+            document.querySelector("html")?.classList.add("dark");
         }
         window.localStorage.setItem("darkMode", (!darkMode).toString());
     };
@@ -38,7 +38,7 @@ const DarkModeToggle = ({ className }: Props) => {
             color="inherit"
             className={`${className}`}
         >
-            {darkMode ? <Brightness4Icon /> : <Brightness7Icon />}
+            {!darkMode ? <Brightness4Icon /> : <Brightness7Icon />}
         </IconButton>
     );
 };
