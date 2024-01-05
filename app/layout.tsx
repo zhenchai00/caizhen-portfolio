@@ -11,6 +11,7 @@ import "../styles/globals.css";
 import NavBar from "@/components/NavigationBar/NavBar";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import Head from "next/head";
 
 const SourceCodePro = Source_Code_Pro({
     weight: ["400", "700"],
@@ -21,9 +22,23 @@ const SourceCodePro = Source_Code_Pro({
 export const metadata: Metadata = {
     title: "CaiZhen Portfolio",
     description: "CaiZhen Portfolio",
-    authors: [{name: "CaiZhen"}],
+    authors: [{ name: "CaiZhen" }],
     creator: "CaiZhen",
-    keywords: ["CaiZhen", "Portfolio", "CaiZhen Portfolio", "Chong Cai Zhen", "caizhen", "caizhen portfolio", "chong caizhen", "chong caizhen portfolio", "cai zhen", "cai zhen portfolio", "chong cai zhen", "chong cai zhen portfolio", "Cai Zhen Project"],
+    keywords: [
+        "CaiZhen",
+        "Portfolio",
+        "CaiZhen Portfolio",
+        "Chong Cai Zhen",
+        "caizhen",
+        "caizhen portfolio",
+        "chong caizhen",
+        "chong caizhen portfolio",
+        "cai zhen",
+        "cai zhen portfolio",
+        "chong cai zhen",
+        "chong cai zhen portfolio",
+        "Cai Zhen Project",
+    ],
 };
 
 export default function RootLayout({
@@ -34,6 +49,12 @@ export default function RootLayout({
     return (
         <html lang="en">
             <AppRouterCacheProvider>
+                <Head>
+                    <meta
+                        name="google-site-verification"
+                        content="xIlnRoG2cz6BozKBKIhHz3mBwR_v0gcZAxAyLdAXbcY"
+                    />
+                </Head>
                 <Script id="darkmodescipt">
                     {`
                         if ('darkMode' in localStorage) {
@@ -51,7 +72,11 @@ export default function RootLayout({
                         }
                     `}
                 </Script>
-                <Script id="google-analytics-1" async src="https://www.googletagmanager.com/gtag/js?id=G-L4F9NLP115" />
+                <Script
+                    id="google-analytics-1"
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-L4F9NLP115"
+                />
                 <Script id="google.-analytics-2">
                     {`
                         window.dataLayer = window.dataLayer || [];
