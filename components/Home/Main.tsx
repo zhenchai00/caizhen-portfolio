@@ -69,6 +69,7 @@ const Main = () => {
                     <Link
                         href="https://drive.google.com/file/d/1EJ9xl_Dhp0FI6mAk9VpB_hw8DFbMfhXG/view?usp=sharing"
                         className="px-6 inline-block py-3 rounded-full mr-4 border-solid border-4 dark:border-2  border-cyan-500 hover:bg-sky-700"
+                        target="_blank"
                     >
                         <span className="text-xl text-black dark:text-white">View my Resume</span>
                     </Link>
