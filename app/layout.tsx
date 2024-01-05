@@ -11,7 +11,6 @@ import "../styles/globals.css";
 import NavBar from "@/components/NavigationBar/NavBar";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-import Head from "next/head";
 
 const SourceCodePro = Source_Code_Pro({
     weight: ["400", "700"],
@@ -39,6 +38,9 @@ export const metadata: Metadata = {
         "chong cai zhen portfolio",
         "Cai Zhen Project",
     ],
+    other:{
+        "google-site-verification": "xIlnRoG2cz6BozKBKIhHz3mBwR_v0gcZAxAyLdAXbcY"
+    },
 };
 
 export default function RootLayout({
@@ -49,12 +51,6 @@ export default function RootLayout({
     return (
         <html lang="en">
             <AppRouterCacheProvider>
-                <Head>
-                    <meta
-                        name="google-site-verification"
-                        content="xIlnRoG2cz6BozKBKIhHz3mBwR_v0gcZAxAyLdAXbcY"
-                    />
-                </Head>
                 <Script id="darkmodescipt">
                     {`
                         if ('darkMode' in localStorage) {
