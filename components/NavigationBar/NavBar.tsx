@@ -12,6 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import NavItem from "./NavItem";
 import Link from "next/link";
+import DarkModeToggle from "./DarkModeToggle";
 
 interface Props {
     window?: () => Window;
@@ -36,15 +37,16 @@ const NavBar = (props: Props) => {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} className="min-h-screen">
-            <div>
+            <div className="flex flex-col align-center justify-center">
                 {MENU_ITEMS.map((item, idx) => (
                     <NavItem
                         key={idx}
                         href={item.href}
                         name={item.name}
-                        className="flex p-4 align-center justify-center text-xl"
+                        className="p-4 text-center"
                     />
                 ))}
+                <DarkModeToggle />
             </div>
         </Box>
     );
@@ -82,6 +84,7 @@ const NavBar = (props: Props) => {
                                 className="justify-between mx-3"
                             />
                         ))}
+                        <DarkModeToggle />
                     </Box>
                 </Toolbar>
             </AppBar>
