@@ -10,7 +10,6 @@ import { Source_Code_Pro } from "next/font/google";
 import "../styles/globals.css";
 import NavBar from "@/components/NavigationBar/NavBar";
 import { Analytics } from "@vercel/analytics/react";
-import Head from "next/head";
 import Script from "next/script";
 
 const SourceCodePro = Source_Code_Pro({
@@ -22,6 +21,9 @@ const SourceCodePro = Source_Code_Pro({
 export const metadata: Metadata = {
     title: "CaiZhen Portfolio",
     description: "CaiZhen Portfolio",
+    authors: [{name: "CaiZhen"}],
+    creator: "CaiZhen",
+    keywords: ["CaiZhen", "Portfolio", "CaiZhen Portfolio", "Chong Cai Zhen", "caizhen", "caizhen portfolio", "chong caizhen", "chong caizhen portfolio", "cai zhen", "cai zhen portfolio", "chong cai zhen", "chong cai zhen portfolio", "Cai Zhen Project"],
 };
 
 export default function RootLayout({
