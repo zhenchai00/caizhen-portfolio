@@ -49,6 +49,15 @@ export default function RootLayout({
                         }
                     `}
                 </Script>
+                <Script id="google-analytics-1" async src="https://www.googletagmanager.com/gtag/js?id=G-L4F9NLP115" />
+                <Script id="google.-analytics-2">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-L4F9NLP115');
+                    `}
+                </Script>
                 <body
                     className={`${SourceCodePro.variable} font-sans min-h-screen mx-auto text-black dark:text-white bg-[#eff1f1] dark:bg-black`}
                 >
