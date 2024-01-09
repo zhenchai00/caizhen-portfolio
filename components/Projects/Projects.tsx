@@ -31,7 +31,7 @@ const Projects = async () => {
                         description={repo.description}
                         forks_count={repo.forks_count}
                         stargazers_count={repo.stargazers_count}
-                        url={"https://github.com/"+repo.name}
+                        url={"https://github.com/"+repo.full_name}
                     />
                 ))}
             </div>
