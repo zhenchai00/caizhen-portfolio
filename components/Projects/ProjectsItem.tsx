@@ -13,7 +13,7 @@ interface Props {
 const ProjectItem = (props: Props) => {
     return (
         <div>
-            <Link href={props.url}>
+            <Link href={props.url} target="_blank">
                 <Card
                     className="flex flex-col text-justify border-2 border-teal-300 dark:border-slate-300 rounded-md h-44 relative p-6"
                     sx={{ backgroundColor: "transparent" }}
