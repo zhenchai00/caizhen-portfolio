@@ -25,7 +25,6 @@ const Projects = async () => {
             </h1>
             <div className={`grid gap-4 grid-cols-1 md:grid-cols-3 grid-rows-1 md:grid-rows-${gridRows}`}>
                 {repos.map((repo: any) => (
-                    console.log("repo count", repo.stargazers_count),
                     <ProjectItem
                         key={repo.id}
                         name={repo.name}
