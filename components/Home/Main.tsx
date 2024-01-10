@@ -13,17 +13,17 @@ const Main = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="col-span-1 md:col-span-8 place-self-center justify-self-start"
+                    className="col-span-1 md:col-span-8 place-self-center justify-self-start md:justify-self-center"
                 >
                     <h1 className="font-extrabold">
-                        <span className="text-black dark:text-white text-7xl ">
+                        <span className="text-black dark:text-white text-5xl md:text-7xl">
                             {"Hello, I'm "}
-                            <span className="text-transparent bg-clip-text sm:text-5xl md:text-6xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+                            <span className="text-transparent bg-clip-text text-5xl md:text-6xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                                 Cai Zhen
                             </span>
                         </span>
                         <br></br>
-                        <span className="text-7xl">
+                        <span className="text-5xl md:text-7xl">
                             {"I'm "}
                             <TypeWriter
                                 options={{
@@ -64,14 +64,18 @@ const Main = () => {
                         href="#projects"
                         className="px-12 mb-4 inline-block py-3 rounded-full mr-4 border-solid border-4 dark:border-2 border-teal-300 hover:bg-emerald-600"
                     >
-                        <span className="text-xl text-black dark:text-white">Projects</span>
+                        <span className="text-xl text-black dark:text-white">
+                            Projects
+                        </span>
                     </Link>
                     <Link
                         href="https://drive.google.com/file/d/1EJ9xl_Dhp0FI6mAk9VpB_hw8DFbMfhXG/view?usp=sharing"
-                        className="px-6 inline-block py-3 rounded-full mr-4 border-solid border-4 dark:border-2  border-cyan-500 hover:bg-sky-700"
+                        className="px-12 inline-block py-3 rounded-full mr-4 border-solid border-4 dark:border-2  border-cyan-500 hover:bg-sky-700"
                         target="_blank"
                     >
-                        <span className="text-xl text-black dark:text-white">View my Resume</span>
+                        <span className="text-xl text-black dark:text-white">
+                            View my Resume
+                        </span>
                     </Link>
                 </motion.div>
                 <div className="col-span-4 md:col-span-4 place-self-center mt-12 lg:mt-0 pt-5 lg:pt-24">
