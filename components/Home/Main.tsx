@@ -69,7 +69,7 @@ const Main = () => {
                         </span>
                     </Link>
                     <Link
-                        href="https://drive.google.com/file/d/1oUy5NW-8_1n7IyuA6b9Wa064IRmnZbLc/view?usp=drive_link"
+                        href="https://drive.google.com/file/d/13gysPPj0WJdwOf6sCNBEjCeMrBrNCjeg/view?usp=sharing"
                         className="px-12 inline-block py-3 rounded-full mr-4 border-solid border-4 dark:border-2  border-cyan-500 hover:bg-sky-700"
                         target="_blank"
                     >
