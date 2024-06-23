@@ -10,11 +10,18 @@ import React from "react";
 import ProjectItem from "@/components/Projects/ProjectsItem";
 
 const Projects = async () => {
+    let projectRemove = [
+        "concurrent-java",
+        "cpp-tutorial",
+        "assembly-tasm",
+        "SAWARATSUKI.ServiceLogos"
+    ];
     let repos = await getUserRepos();
     repos = repos
         .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count)
         .filter((repo: any) => !repo.fork)
-        .filter((repo: any) => !repo.archived);
+        .filter((repo: any) => !repo.archived)
+        .filter((repo: any) => !projectRemove.includes(repo.name));
 
     let gridRows = Math.ceil(repos.length / 3);
 
