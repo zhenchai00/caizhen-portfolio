@@ -10,19 +10,25 @@ const TAB_DATA = [
         title: "Skills",
         id: "skills",
         content: (
-            <ul className="list-disc pl-2">
-                <li>PHP</li>
-                <li>JAVA</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>React JS</li>
-                <li>Next JS</li>
-                <li>Express JS</li>
-                <li>Sencha Ext JS</li>
-                <li>Tailwind CSS</li>
-                <li>Bootstrap CSS</li>
-                <li>MySQL</li>
-            </ul>
+            <div className="grid grid-cols-2">
+                    <ul className="list-disc pl-2">
+                        <li>PHP</li>
+                        <li>JAVA</li>
+                        <li>C++</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>MySQL</li>
+                        <li>ASM</li>
+                    </ul>
+                    <ul className="list-disc pl-2">
+                        <li>React JS</li>
+                        <li>Next JS</li>
+                        <li>Express JS</li>
+                        <li>Sencha Ext JS</li>
+                        <li>Tailwind CSS</li>
+                        <li>Bootstrap CSS</li>
+                    </ul>
+            </div>
         ),
     },
     {
@@ -40,9 +46,9 @@ const TAB_DATA = [
         id: "education",
         content: (
             <ul className="list-disc pl-2">
-                <li>Asia Pacific University</li>
-                <li>Putra Intelek International College</li>
-                <li>SMK Puchong Perdana</li>
+                <li className="py-2">Asia Pacific University<br/>Bachelor&#8217;s Degree in Computer Sciences</li>
+                <li className="py-2">Putra Intelek International College<br/>Diploma in Information Technology</li>
+                <li className="py-2">SMK Puchong Perdana</li>
             </ul>
         ),
     },
