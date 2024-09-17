@@ -21,6 +21,7 @@ const TAB_DATA = [
                         <li>ASM</li>
                     </ul>
                     <ul className="list-disc pl-2">
+                        <li>Spring Boot JAVA</li>
                         <li>React JS</li>
                         <li>Next JS</li>
                         <li>Express JS</li>
@@ -36,8 +37,8 @@ const TAB_DATA = [
         id: "experiences",
         content: (
             <ul className="list-disc pl-2">
-                <li>Software Engineer</li>
-                <li>Web Developer</li>
+                <li><span className="font-semibold">Software Engineer</span> - Silverstream Technology Sdn Bhd</li>
+                <li><span className="font-semibold">Web Developer</span> - iFixx Retail Sdn Bhd </li>
             </ul>
         ),
     },
