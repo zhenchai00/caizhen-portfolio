@@ -14,6 +14,7 @@ const TAB_DATA = [
                     <ul className="list-disc pl-2">
                         <li>PHP</li>
                         <li>JAVA</li>
+                        <li>Rust</li>
                         <li>C++</li>
                         <li>JavaScript</li>
                         <li>TypeScript</li>
@@ -37,6 +38,7 @@ const TAB_DATA = [
         id: "experiences",
         content: (
             <ul className="list-disc pl-2">
+                <li><span className="font-semibold">Software Engineer Internship</span> - Memo Agility Sdn Bhd</li>
                 <li><span className="font-semibold">Software Engineer</span> - Silverstream Technology Sdn Bhd</li>
                 <li><span className="font-semibold">Web Developer</span> - iFixx Retail Sdn Bhd </li>
             </ul>
