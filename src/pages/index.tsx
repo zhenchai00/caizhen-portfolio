@@ -1,7 +1,4 @@
 import MainLayout from "@/components/layout/MainLayout";
-import { ModeToggle } from "@/components/navigationbar/ModeToggle";
-import NavigationBar from "@/components/navigationbar/NavigationBar";
-import Image from "next/image";
 export default function Home() {
   return (
     <MainLayout>

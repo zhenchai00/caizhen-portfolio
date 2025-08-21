@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+const config = {
     darkMode: "class",
-};
+} satisfies Config;
+
 export default config;

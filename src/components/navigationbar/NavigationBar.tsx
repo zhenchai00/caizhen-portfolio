@@ -8,7 +8,7 @@ import {
 } from "@/ui/navigation-menu";
 import { NAVIGATION_ITEMS } from "./const";
 import Link from "next/link";
-import { ModeToggle } from "./ModeToggle";
+import ModeToggle from "./ModeToggle";
 
 const NavigationBar = () => {
     return (
@@ -22,7 +22,7 @@ const NavigationBar = () => {
                     </NavigationMenuItem>
                 </NavigationMenuList>
             ))}
-            <ModeToggle />
+            <ModeToggle className="h-9 w-9" contentClassName="w-36" />
         </NavigationMenu>
     );
 };
