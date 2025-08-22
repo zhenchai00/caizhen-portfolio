@@ -22,7 +22,6 @@ const TAB_DATA = [
                         <li>ASM</li>
                     </ul>
                     <ul className="list-disc pl-2">
-                        <li>Spring Boot JAVA</li>
                         <li>React JS</li>
                         <li>Next JS</li>
                         <li>Express JS</li>
