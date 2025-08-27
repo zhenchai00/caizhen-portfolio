@@ -2,6 +2,8 @@ import React, { Component, FC, ReactNode } from "react";
 import NavigationBar from "@/components/navigationbar/NavigationBar";
 import NavigationMenuMobile from "@/components/navigationbar/mobile/NavigationMenuMobile";
 import Head from "next/head";
+import Headroom from "react-headroom";
+import ScrollTopButton from "../navigationbar/ScrollTopButton";
 
 interface MainLayoutProps {
     children: ReactNode;
@@ -16,23 +18,28 @@ const MainLayout: FC<MainLayoutProps> = ({
         <div className="min-h-screen">
             <Head>
                 <title>{siteTitle}</title>
-                <meta name={siteTitle} content="Showcasing my work and projects" />
+                <meta
+                    name={siteTitle}
+                    content="Showcasing my work and projects"
+                />
             </Head>
             {/* Header */}
-            <header className="w-full border-b bg-card sticky top-0">
-                <div className="container mx-auto py-2 px-4 flex items-center justify-between">
-                    <div className="flex flex-col justify-normal p-2">
-                        <span className="font-bold text-xl tracking-tight">
-                            CaiZhen Portfolio
-                        </span>
-                        <span className="text-xs text-muted-foreground">
-                            Software & Photography
-                        </span>
+            <Headroom>
+                <header className="w-full border-b bg-card">
+                    <div className="container mx-auto py-2 px-4 flex items-center justify-between">
+                        <div className="flex flex-col justify-normal p-2">
+                            <span className="font-bold text-xl tracking-tight">
+                                CaiZhen Portfolio
+                            </span>
+                            <span className="text-xs text-muted-foreground">
+                                Software & Photography
+                            </span>
+                        </div>
+                        <NavigationBar />
+                        <NavigationMenuMobile />
                     </div>
-                    <NavigationBar />
-                    <NavigationMenuMobile />
-                </div>
-            </header>
+                </header>
+            </Headroom>
 
             {/* Main Content */}
             <main className="flex-1 container mx-auto px-8 py-8">
@@ -46,6 +53,7 @@ const MainLayout: FC<MainLayoutProps> = ({
                     reserved.
                 </div>
             </footer>
+            <ScrollTopButton />
         </div>
     );
 };
