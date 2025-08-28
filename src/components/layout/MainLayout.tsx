@@ -42,7 +42,7 @@ const MainLayout: FC<MainLayoutProps> = ({
             </Headroom>
 
             {/* Main Content */}
-            <main className="flex-1 container mx-auto px-8 py-8">
+            <main className="flex-1 container mx-auto px-8 py-4 min-h-screen">
                 {children}
             </main>
 
