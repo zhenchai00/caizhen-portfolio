@@ -4,11 +4,6 @@ export default function Home() {
   return (
     <MainLayout>
       <Hero />
-      <Hero />
-      <Hero />
-      <Hero />
-      <Hero />
-      <Hero />
     </MainLayout>
   );
 }
