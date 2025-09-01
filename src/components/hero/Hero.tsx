@@ -29,22 +29,24 @@ const Hero = () => {
                                 cursor={false}
                             />
                         </h2>
-                        <div className="flex gap-3 md:mt-15 mt-4 md:justify-start justify-center">
-                            <a href="/#projects">
+                        <div className="flex md:gap-3 md:mt-15 mt-4 md:justify-start justify-center">
+                            <a href="/#projects" className="col-span-6 md:mx-0 mx-2 w-[50%] md:w-fit">
                                 <MotionButton
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                     variant={"outline"}
+                                    className="w-full"
                                 >
                                     My Builds
                                     <Blocks />
                                 </MotionButton>
                             </a>
-                            <a href="/#about">
+                            <a href="/#about" className="col-span-6 md:mx-0 mx-2 w-[50%] md:w-fit">
                                 <MotionButton
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
                                     variant={"default"}
+                                    className="w-full"
                                 >
                                     Get to Know Me
                                     <SmilePlus />
