@@ -6,7 +6,7 @@ const IndexAboutMe = () => {
     return (
         <div
             id="about"
-            className="grid md:grid-cols-12 grid-cols-1 items-center justify-items-stretch gap-4"
+            className="grid md:grid-cols-12 grid-cols-1 items-center my-4"
         >
             <div className="col-span-5 hidden md:block">
                 <DotLottieReact

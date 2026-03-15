@@ -8,11 +8,13 @@ import ScrollTopButton from "../navigationbar/ScrollTopButton";
 interface MainLayoutProps {
     children: ReactNode;
     siteTitle?: string;
+    className?: string;
 }
 
 const MainLayout: FC<MainLayoutProps> = ({
     children,
     siteTitle = "CaiZhen Portfolio",
+    className = "",
 }: MainLayoutProps) => {
     return (
         <div className="min-h-screen">
@@ -42,7 +44,7 @@ const MainLayout: FC<MainLayoutProps> = ({
             </Headroom>
 
             {/* Main Content */}
-            <main className="flex-1 container mx-auto px-8 py-4 min-h-screen">
+            <main className={`flex-1 container mx-auto px-8 py-4 min-h-screen ${className}`}>
                 {children}
             </main>
 
