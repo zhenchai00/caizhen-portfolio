@@ -41,7 +41,7 @@ const Hero = () => {
                                     <Blocks />
                                 </MotionButton>
                             </a>
-                            <a href="/#about" className="col-span-6 md:mx-0 mx-2 w-[50%] md:w-fit">
+                            <a href="/about" className="col-span-6 md:mx-0 mx-2 w-[50%] md:w-fit">
                                 <MotionButton
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}

@@ -4,3 +4,10 @@ export type Experience = {
     period: string;
     points: string[];
 };
+
+export type Education = {
+    degree: string;
+    institution: string;
+    period: string;
+    points: string[];
+};

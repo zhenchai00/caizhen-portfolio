@@ -7,13 +7,13 @@ type ExperiencesProps = {
 const experiences = ({ experiences }: ExperiencesProps) => {
     return (
         <div className="mb-10 max-w-6xl mx-auto">
-            <h2 className="font-serif text-lg font-600 text-steel-700 mb-5 flex items-center gap-2">
-                <hr className="w-5 h-[1px] bg-steel-300" /> Experience
+            <h2 className="font-serif text-2xl font-600 text-steel-700 mb-5 flex items-center gap-2">
+                <hr className="w-5 h-px bg-steel-300" /> Experience
             </h2>
             <div className="flex flex-col gap-6">
                 {experiences.map((exp, index) => (
                     <div key={index} className="flex items-start gap-4">
-                        <div className="w-1.5 h-1.5 rounded-full bg-steel-300 mt-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 rounded-full bg-steel-300 mt-2 shrink-0"></div>
                         <div className="flex-1">
                             <div className="flex items-start justify-between mb-1">
                                 <div>
@@ -24,7 +24,7 @@ const experiences = ({ experiences }: ExperiencesProps) => {
                                         {exp.company}
                                     </p>
                                 </div>
-                                <p className="text-xs text-steel-400 flex-shrink-0">
+                                <p className="text-xs text-steel-400 shrink-0">
                                     {exp.period}
                                 </p>
                             </div>

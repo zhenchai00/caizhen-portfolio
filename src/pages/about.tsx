@@ -1,7 +1,9 @@
 import MainLayout from "@/components/layout/MainLayout";
-import { Github, Linkedin, Mail, MapPin, PhoneCall } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import Experiences from "@/components/about/Experiences";
-import { Experience } from "@/type/AboutType";
+import { Education, Experience } from "@/type/AboutType";
+import Skills from "@/components/about/Skills";
+import Educations from "@/components/about/Educations";
 
 const defaultConfig = {
     fullName: "Chong Cai Zhen",
@@ -13,13 +15,6 @@ const defaultConfig = {
     linkedinUrl: "https://linkedin.com/in/chongcaizhen",
     summaryText:
         "Software Engineer specializing in designing and supporting resilient microservice architectures using Java and Spring Boot, containerized with Docker and orchestrated with Kubernetes. Possess 4 years of experience in the information technology industry, including 1 year designing and supporting microservices in the banking and financial sector, 2 years as a LEMP stack developer in a financial services company, and 1 year working with Web Content Management Systems in an e-commerce environment.",
-    background_color: "#f0f3f8",
-    surface_color: "#ffffff",
-    text_color: "#233348",
-    primary_action_color: "#5a7eb3",
-    secondary_action_color: "#96aed2",
-    font_family: "DM Sans",
-    font_size: 14,
 };
 
 const experiences: Experience[] = [
@@ -67,19 +62,51 @@ const experiences: Experience[] = [
     },
 ];
 
-const skills = {
-    system: [
-        "Distributed Systems",
-        "Microservices",
-        "Event Sourcing",
-        "CQRS",
-        "CAP Theorem",
-        "Load Balancing",
-    ],
-    tools: ["Go", "Python", "Java", "PostgreSQL", "Redis", "gRPC", "GraphQL"],
-    frontend: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
-    infra: ["Kubernetes", "Docker", "AWS", "Terraform", "CI/CD", "Prometheus"],
+const skills: Record<string, string[]> = {
+    tools: ["Java", ".NET", "PHP", "PostgreSQL", "MySQL", "MongoDB"],
+    frontend: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Bootstrap"],
+    infra: ["Linux", "Git", "Kubernetes", "Docker", "AWS", "CI/CD"],
+    admin: ["Jira", "Confluence", "Scrum", "Agile", "Microsoft Office", "Google Workspace"],
 };
+
+const educations: Education[] = [
+    {
+        degree: "Bachelor of Computer Science (Hons) Software Engineering",
+        institution: "Asia Pacific University of Technology & Innovation (APU)",
+        period: "Mar 2023 - Oct 2025",
+        points: [
+            "Graduated with First Class Honours, achieving a CGPA of 3.59/4.00",
+            "Great Malaysia AI Hackathon 2025 participant, Automated ESG Report by using AWS services",
+            "Lv. 99 Game Jam 2023 Participant, part of a 48-hour global game jam held on-site",
+            "Developed simple Diabetes Healthcare System with ASP .NET C# and deploy to AWS with the microservices architecture",
+            "Develop simple Real Time Traffic Simulation System with Rust ",
+            "Develop simple RMI based Leave Management System with POJO and networking dependencies in Java",
+            "Develop simple Airport Traffic Control System with Concurrency and Multithreading behavior in POJO Java",
+            "Develop simple food ordering system with Object Oriented Concept and Design Pattern (Singleton) in POJO Java",
+            "Developed the Zinnie Chatbot Project, a chatbot centered around the Zinnia flower",
+        ]
+    },
+    {
+        degree: "Diploma in Information Technology",
+        institution: "Putra Intelek International College (PIIC)",
+        period: "Mar 2018 - Jan 2021",
+        points: [
+            "Graduated with First Class Honours, achieving a CGPA of 3.82/4.00",
+            "Received the Dean's Award in October 2018, February 2019, and March 2019, recognizing outstanding achievements",
+            "Volunteer of 9th Putra Intelek International College Convocation Ceremony by ensuring the smooth flow of the university convocation by ushering 200 of guests to their designated seats and providing guidance to various event locations",
+            "Served as a Team Leader in Community Service in 2019, leading and coordinating team efforts for community initiatives",
+        ]
+    },
+    {
+        degree: "Amazon Web Services Cloud Practitioner Essentials",
+        institution: "Amazon Web Services (AWS)",
+        period: "2024",
+        points: [
+            "Completed the AWS Cloud Practitioner Essentials course, gaining foundational knowledge of AWS cloud services and best practices for cloud computing",
+        ]
+    }
+];
+
 const about = () => {
     return (
         <MainLayout className="max-w-6xl mx-auto ">
@@ -128,6 +155,8 @@ const about = () => {
                 </a>
             </div>
                 <Experiences experiences={experiences} />
+                <Skills skills={skills} />
+                <Educations educations={educations} />
         </MainLayout>
     );
 };
