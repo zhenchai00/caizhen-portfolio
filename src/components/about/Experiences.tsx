@@ -1,4 +1,4 @@
-import { Experience } from "@/type/AboutType";
+import { Experience } from "@/components/about/type";
 
 type ExperiencesProps = {
     experiences: Experience[];

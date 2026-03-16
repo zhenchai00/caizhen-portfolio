@@ -1,4 +1,6 @@
 import MainLayout from "@/components/layout/MainLayout";
+import ProjectElement from "@/components/project/ProjectElement";
+import { projectsData } from "@/components/project/projectsData";
 
 const projects = () => {
     return (
@@ -11,9 +13,13 @@ const projects = () => {
                     A Showcase of My Work
                 </h1>
             </div>
-            {/* Project list will go here */}
-            </MainLayout>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+                {projectsData.map((project, index) => (
+                    <ProjectElement key={index} project={project} />
+                ))}
+            </div>
+        </MainLayout>
     );
-}
+};
 
 export default projects;

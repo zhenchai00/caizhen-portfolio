@@ -4,6 +4,7 @@ import NavigationMenuMobile from "@/components/navigationbar/mobile/NavigationMe
 import Head from "next/head";
 import Headroom from "react-headroom";
 import ScrollTopButton from "../navigationbar/ScrollTopButton";
+import Link from "next/link";
 
 interface MainLayoutProps {
     children: ReactNode;
@@ -29,14 +30,16 @@ const MainLayout: FC<MainLayoutProps> = ({
             <Headroom>
                 <header className="w-full border-b bg-card">
                     <div className="container mx-auto py-2 px-4 flex items-center justify-between">
-                        <div className="flex flex-col justify-normal p-2">
-                            <span className="font-bold text-xl tracking-tight">
-                                CaiZhen Portfolio
-                            </span>
-                            <span className="text-xs text-muted-foreground">
-                                Software & Photography
-                            </span>
-                        </div>
+                        <Link href="/" className="flex items-center gap-2">
+                            <div className="flex flex-col justify-normal p-2">
+                                <span className="font-bold text-xl tracking-tight">
+                                    CaiZhen Portfolio
+                                </span>
+                                <span className="text-xs text-muted-foreground">
+                                    Software & Photography
+                                </span>
+                            </div>
+                        </Link>
                         <NavigationBar />
                         <NavigationMenuMobile />
                     </div>
@@ -44,7 +47,9 @@ const MainLayout: FC<MainLayoutProps> = ({
             </Headroom>
 
             {/* Main Content */}
-            <main className={`flex-1 container mx-auto px-8 py-4 min-h-screen ${className}`}>
+            <main
+                className={`flex-1 container mx-auto px-8 py-4 min-h-screen ${className}`}
+            >
                 {children}
             </main>
 

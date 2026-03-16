@@ -1,4 +1,4 @@
-import { Education } from "@/type/AboutType";
+import { Education } from "@/components/about/type";
 
 const Educations = ({ educations }: { educations: Education[] }) => {
     return (
