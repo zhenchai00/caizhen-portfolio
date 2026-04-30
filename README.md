@@ -6,8 +6,8 @@ This is my personal portfolio website.
 
 ## Dark Mode
 
-![Cai Zhen - Dark Mode](resource/portfolio-dark.png)
+![Cai Zhen - Dark Mode](./resource/portfolio-dark.png)
 
 ## Normal Mode
 
-![Cai Zhen - Normal Mode](resource/portfolio-white.png)
+![Cai Zhen - Normal Mode](./resource/portfolio-white.png)
