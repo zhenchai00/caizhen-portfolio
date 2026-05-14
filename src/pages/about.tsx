@@ -1,5 +1,5 @@
 import MainLayout from "@/components/layout/MainLayout";
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import Experiences from "@/components/about/Experiences";
 import Skills from "@/components/about/Skills";
 import Educations from "@/components/about/Educations";
@@ -9,8 +9,20 @@ import {
     educations,
     skills,
 } from "@/components/about/about";
+import Image from "next/image";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const about = () => {
+    const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+    const iconSrc =
+        mounted && resolvedTheme === "dark"
+            ? "/icons/github-w.svg"
+            : "/icons/github.svg";
     return (
         <MainLayout className="max-w-6xl mx-auto ">
             <div className="hero-section mb-10">
@@ -44,7 +56,13 @@ const about = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Github className="w-3.5 h-3.5" />{" "}
+                    <Image
+                        src={iconSrc}
+                        alt="GitHub"
+                        width={14}
+                        height={14}
+                        className="w-3.5 h-3.5"
+                    />{" "}
                     <span id="contact-github">GitHub</span>
                 </a>
                 <a
@@ -53,7 +71,13 @@ const about = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Linkedin className="w-3.5 h-3.5" />{" "}
+                    <Image
+                        src="/icons/linkedin.svg"
+                        alt="LinkedIn"
+                        width={14}
+                        height={14}
+                        className="w-3.5 h-3.5"
+                    />{" "}
                     <span id="contact-linkedin">LinkedIn</span>
                 </a>
             </div>
