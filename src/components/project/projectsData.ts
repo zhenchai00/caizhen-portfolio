@@ -2,6 +2,12 @@ import { Project } from "./type";
 
 export const projectsData: Project[] = [
     {
+        name: "Darkroom Film Tools",
+        description: "A general-purpose tool for calculating the development time of black and white films. It features a user-friendly interface and supports multiple film types and developers.",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+        link: "https://github.com/zhenchai00/darkroom-film-tools",
+    },
+    {
         name: "Lettuce Supply Chain Management System",
         description: "A system for managing the supply chain of lettuce from farm to table, built with modern web technologies such as Hyperledger Frabric. It features a user-friendly interface for farmers, distributors, and retailers to track the movement of lettuce and ensure transparency in the supply chain.",
         technologies: ["Hyperledger Fabric", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Docker", "Shell Scripting"],
